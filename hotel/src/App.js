@@ -1,24 +1,26 @@
+//where th componenets will go to get rendered
+//navbar
+//Rent comp
+//Return Comp
+
+
+
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Navbar from './components/Navbar'
+import Rent from './components/Rent'
+import Return from './components/Return'
+import {RoomContextProvider} from './context/RoomContext'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <RoomContextProvider>
+      <Navbar />
+      <Rent />
+      <Return />
+     </RoomContextProvider>
     </div>
   );
 }
