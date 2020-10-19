@@ -7,22 +7,37 @@ import RoomContext from '../context/RoomContext'
         const { rooms, setRooms } = useContext(RoomContext);
 
         
-        let renterName;
-
-        
 
         const returnRoom = (e) => {
 
-            if (prompt("Do you want to check out? Y/N") === "Y"){
 
-                 renterName = prompt("Enter your name:")
+                let alreadyRented = prompt("If you want to check out please enter your name:")
+
+
+
+                let updatedRooms = rooms.map(floor => {
+                    return floor.map(room => {
+                        if ( alreadyRented === room.renter || room.renter != null) {
+                            room.renter = null
+
+                        } 
+
+                        return rooms
+
+
+                    })
+                })
+
+                setRooms(updatedRooms)
+                //console.log(updatedRooms)
+
+
+
             }
     
-             if(renterName === rooms.renter){
-                localStorage.rooms.renter = null
-                } 
+             
 
-            }
+            
 
         return (
             <div>

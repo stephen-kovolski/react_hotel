@@ -53,8 +53,7 @@ function hotelRooms(floor, room) {  //define props
         
         return (JSON.parse(storedData));
         
-        } else return hotelRooms(4,4)  //**********************RETURN SOMETHING OTHER THAN NULL */
-        
+        } else return hotelRooms(4,4)  
         })
         
         const [dispAvail, setDisplayAvail] = useState(true)

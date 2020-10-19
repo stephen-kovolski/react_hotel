@@ -35,7 +35,7 @@ import RoomContext from '../context/RoomContext'
 
                 console.log(updatedRooms)
 
-                setRooms(updatedRooms)
+                
 
 
                 
@@ -48,26 +48,13 @@ import RoomContext from '../context/RoomContext'
 
         }
 
-        // return (
-        //     <div>
-        //         <h1>These {available.length} Rooms Are Available To Rent</h1>
-        //     </div>
-                // {flattenArr.map(({room, renter, price}) => {
-                //     if (renter===null){
+    
                             return (
                                 <div>
                                   <button 
                                     onClick = {rentClick}>Click To Check In</button>
                                 </div>
-                     )} //else return null;
-
-        //                 }
-        //             )
-
-        //         }
+                     )} 
 
                     
 
-        // )
-
-        //             }
